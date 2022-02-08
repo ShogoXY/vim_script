@@ -51,7 +51,7 @@ Poniżej opisane funkcje jakie zostaną zainstalowane przez skrypt
   > Zaznaczanie niepotrzebnych spacji na końcach lini  
   > [GitHub Pages](https://github.com/ntpeters/vim-better-whitespace)
 * preservim/nerdcommenter
-  > Łatwe komentowanie i usuwanie komentarzy w kodzie
+  > Łatwe komentowanie i usuwanie komentarzy w kodzie  
   > [GitHub Pages](https://github.com/preservim/nerdcommenter)
 
 # Skróty klawiszowe
