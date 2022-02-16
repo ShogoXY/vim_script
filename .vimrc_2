@@ -35,6 +35,20 @@ autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
 map <F5> :set spell!<CR>
 nnoremap \s ea<C-X><C-S>
 
+"move line
+nnoremap <S-Up> :m-2<CR>
+nnoremap <S-Down> :m+<CR>
+inoremap <S-Up> <Esc>:m-2<CR><Esc>i
+inoremap <S-Down> <Esc>:m+<CR><Esc>i
+
+"mouse copy CTRL+SHIFT
+nnoremap <Leader>mm :set mouse=a
+nnoremap <Leader>nn :set mouse=
+inoremap <Leader>mm :set mouse=a
+inoremap <Leader>nn :set mouse=
+vnoremap <Leader>mm :set mouse=a
+vnoremap <Leader>nn :set mouse=
+
 " exit
 noremap <Leader>qq :qa <CR>
 " }}}
@@ -62,6 +76,7 @@ set nowrap
 
 "enable mouse
 set mouse=a
+
 
 nnoremap <A-LeftMouse> <A-LeftMouse>i
 "wild menu
