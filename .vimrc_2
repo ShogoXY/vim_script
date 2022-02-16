@@ -44,10 +44,7 @@ inoremap <S-Down> <Esc>:m+<CR><Esc>i
 "mouse copy CTRL+SHIFT
 nnoremap <Leader>mm :set mouse=a
 nnoremap <Leader>nn :set mouse=
-inoremap <Leader>mm :set mouse=a
-inoremap <Leader>nn :set mouse=
-vnoremap <Leader>mm :set mouse=a
-vnoremap <Leader>nn :set mouse=
+
 
 " exit
 noremap <Leader>qq :qa <CR>
