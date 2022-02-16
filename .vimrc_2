@@ -14,6 +14,32 @@
 
 
 
+"MAIN HOTKEY
+"   <Space> Leader key
+"   <F5> spell check
+"   <F9> save amd run program (python, bash)
+"   <Shift-UP> move line up
+"   <Shift-down> move line down
+"   <Ctrl-s> save file
+"   <\-s> show spellcheck hint
+"   <Leader-qq> quit
+"   <Leader-ww> save and quit
+"   <Leader-mm> set vim mouse
+"   <Leader-nn> set desktop mouse
+"   <Leader-fn> split screen vertycli ( | )
+"   <Leader-jn> split screen horizontal ( _ )
+"   <Leader-hh> highlight
+"   <Leader-gg> run git (fugitive)
+"   <Leader-gc> Git commit
+"   <Leader-gp> Git push
+"   <Ctrl-t> NerdTree
+"   <Shift-i> on NerdTree - Show hiden file
+"   <Ctrl-f> Find open file on NerdTree
+"
+
+
+
+
 " === RUN Python <F9> === {{{
 " run python script always save first
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!clear; python3' shellescape(@%, 1)<CR>
@@ -23,8 +49,8 @@ autocmd FileType sh imap <buffer> <F9> <esc> :w<CR>:silent !clear <CR> :!%:p<CR>
 " }}}
 
 " === GLOBAL HOT KEY === {{{
-let mapleader=","
-nnoremap <Space> :
+let mapleader=" "
+"nnoremap <Space> :
 nnoremap <C-s> :w <CR>:StripWhitespace <CR>
 imap <buffer> <C-S> <esc> :w <CR>:StripWhitespace <CR>
 let g:autopep8_on_save = 1
@@ -48,6 +74,7 @@ nnoremap <Leader>nn :set mouse=
 
 " exit
 noremap <Leader>qq :qa <CR>
+noremap <Leader>ww :wqa <CR>
 " }}}
 
 " === MAIN SET === {{{
