@@ -18,6 +18,7 @@
 "   <Space> Leader key
 "   <F5> spell check
 "   <F9> save amd run program (python, bash)
+"   <F8> AutoPep8 for Python
 "   <Shift-UP> move line up
 "   <Shift-down> move line down
 "   <Ctrl-s> save file
