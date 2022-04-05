@@ -50,12 +50,10 @@ autocmd FileType sh imap <buffer> <F9> <esc> :w<CR>:silent !clear <CR> :!%:p<CR>
 
 " === GLOBAL HOT KEY === {{{
 let mapleader=" "
-"nnoremap <Space> :
-nnoremap <C-s> :w <CR>:StripWhitespace <CR>
-imap <buffer> <C-S> <esc> :w <CR>:StripWhitespace <CR>
-let g:autopep8_on_save = 1
-let g:autopep8_disable_show_diff=1
 
+
+autocmd FileType python nnoremap <C-s> :w <CR>:StripWhitespace <CR>
+autocmd FileType python imap <buffer> <C-S> <esc> :w <CR>:StripWhitespace <CR>
 autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
 
 map <F5> :set spell!<CR>
@@ -110,7 +108,7 @@ set wildmode=longest:full,full
 "enable syntax highlight
 syntax enable
 " enable all Python syntax highlighting features
-let python_highlight_all = 1
+" let python_highlight_all = 1
 
 set expandtab
 set sw=4
@@ -208,14 +206,11 @@ nnoremap <C-n> :let NERDTreeShowHidden=1 <CR>
 " }}}
 
 "  === COLOR ===   {{{
-let g:gruvbox_guisp_fallback = "bg"
 set background=dark
-let g:solarized_termcolors=256
 set t_Co=256
-"colorscheme solarized
 
-colorscheme gruvbox
-"colorscheme onedark
+"colorscheme gruvbox
+colorscheme onedark
 
 " change color background
 " augroup InsertHook
@@ -236,21 +231,21 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 "  === BACKUP ===  {{{
 
-"Turn on backup option
-set backup
+"""Turn on backup option
+"set backup
 
-"Where to store backups
-silent !mkdir vim_backup > /dev/null 2>&1
+"""Where to store backups
+"silent !mkdir vim_backup > /dev/null 2>&1
 
-"Make backup before overwriting the current buffer
-set backupdir=~/vim_backup//
-set writebackup
+"""Make backup before overwriting the current buffer
+"set backupdir=~/vim_backup//
+"set writebackup
 
-"Overwrite the original backup file
-set backupcopy=yes
+"""Overwrite the original backup file
+"set backupcopy=yes
 
-"Meaningful backup name, ex: filename@2015-04-05.14:59
-au BufWritePre * let &bex = '@' . strftime("%F.%H:%M")
+"""Meaningful backup name, ex: filename@2015-04-05.14:59
+"au BufWritePre * let &bex = '@' . strftime("%F.%H:%M")
 " }}}
 
 " === COPY / PASTE === {{{
