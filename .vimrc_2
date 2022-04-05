@@ -72,8 +72,8 @@ nnoremap <Leader>nn :set mouse=
 
 
 " exit
-noremap <Leader>qq :qa <CR>
-noremap <Leader>ww :wqa <CR>
+noremap <Leader>qq :confirm qa <CR>
+noremap <Leader>ww :confirm xa <CR>
 " }}}
 
 " === MAIN SET === {{{
