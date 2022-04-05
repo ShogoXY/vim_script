@@ -86,7 +86,7 @@ set colorcolumn=80
 set scrolloff=10
 
 " LANGUAGE
-setlocal spell spelllang=pl,en_us
+setlocal spelllang=pl,en_us
 
 
 set shortmess=a
@@ -151,6 +151,7 @@ nnoremap <C-H> <C-W><C-H>
 " }}}
 
 "  === Vundle Plug === {{{
+
 set nocompatible              " required
 filetype off                  " required
 
@@ -163,18 +164,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-" }}}
-
-"  === PLUGINS ===   {{{
-
-
-
+Plugin 'sheerun/vim-polyglot'
 Plugin 'dense-analysis/ale'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'ycm-core/YouCompleteMe'
@@ -189,12 +179,17 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'preservim/nerdcommenter'
 Plugin 'kqito/vim-easy-replace'
 
-
 "power line
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-set laststatus=2
 
 "Plugin 'nathanaelkane/vim-indent-guides'
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" }}}
 
 "  === NERDTREE ===
 " Start NERDTree and put the cursor back in the other window.
