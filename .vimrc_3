@@ -96,7 +96,7 @@ nnoremap <C-H> <C-W><C-H>
 ""inoremap {;<CR> {<CR>};<ESC>O
 
 " }}}
-"  Vundle {{{
+"  Plugin   {{{
 set nocompatible              " required
 filetype off                  " required
 
@@ -109,17 +109,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-" }}}
-"  Plugin   {{{
-
-
-
+Plugin 'sheerun/vim-polyglot'
 Plugin 'dense-analysis/ale'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'ycm-core/YouCompleteMe'
@@ -133,13 +123,19 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'preservim/nerdcommenter'
 Plugin 'kqito/vim-easy-replace'
-
-
 "power line
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 "Plugin 'nathanaelkane/vim-indent-guides'
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 " }}}
+
+
 "  NERDTREE  {{{ 
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
@@ -169,20 +165,20 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "  BuckUp  {{{
 
 "Turn on backup option
-set backup
+"set backup
 
 "Where to store backups
-silent !mkdir vim_backup > /dev/null 2>&1
+"silent !mkdir vim_backup > /dev/null 2>&1
 
 "Make backup before overwriting the current buffer
-set backupdir=vim_backup//
-set writebackup
+"set backupdir=vim_backup//
+"set writebackup
 
 "Overwrite the original backup file
-set backupcopy=yes
+"set backupcopy=yes
 
 "Meaningful backup name, ex: filename@2015-04-05.14:59
-au BufWritePre * let &bex = '@' . strftime("%F.%H:%M")
+"au BufWritePre * let &bex = '@' . strftime("%F.%H:%M")
 " }}}
 " copy {{{
 
