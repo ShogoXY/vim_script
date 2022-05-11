@@ -190,7 +190,7 @@ filetype plugin indent on    " required
 
 " }}}
 
-"  === NERDTREE ===
+"  === NERDTREE === {{{
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
 nnoremap <leader>n :NERDTreeFocus<CR>
@@ -207,13 +207,16 @@ nnoremap <C-n> :let NERDTreeShowHidden=1 <CR>
 " }}}
 
 "  === COLOR ===   {{{
-set background=dark
+
+" set transparent background
+hi Normal guibg=NONE ctermbg=NONE
+"set background=dark
 set t_Co=256
 
 "colorscheme gruvbox
 colorscheme onedark
 
-" change color background
+" change color background when goes to insert mode
 " augroup InsertHook
 "    autocmd!
 "    autocmd InsertEnter * hi Normal ctermbg=0 "at the time of insertion mode color
