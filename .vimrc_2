@@ -16,6 +16,7 @@
 
 "MAIN HOTKEY
 "   <Space> Leader key
+"   <Ctrl-t> transparent background
 "   <F5> spell check
 "   <F9> save amd run program (python, bash)
 "   <F8> AutoPep8 for Python
@@ -208,8 +209,19 @@ nnoremap <C-n> :let NERDTreeShowHidden=1 <CR>
 
 "  === COLOR ===   {{{
 
-" set transparent background
-hi Normal guibg=NONE ctermbg=NONE
+let t:is_transparent = 0
+function! Toggle_transparent()
+    if t:is_transparent == 0
+        hi Normal guibg=NONE ctermbg=NONE
+        let t:is_transparent = 1
+    else
+        set background=dark
+        let t:is_transparent = 0
+    endif
+endfunction
+nnoremap <C-t> : call Toggle_transparent()<CR>
+
+
 "set background=dark
 set t_Co=256
 
