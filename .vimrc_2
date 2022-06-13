@@ -37,6 +37,8 @@
 "   <Ctrl-t> NerdTree
 "   <Shift-i> on NerdTree - Show hiden file
 "   <Ctrl-f> Find open file on NerdTree
+"   <Leader-cc> commet line
+"   <Leader-cu> uncommet
 "
 
 
