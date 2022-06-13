@@ -33,4 +33,4 @@ cd
 
 wget --output-document=/home/$USER/.vimrc https://raw.githubusercontent.com/ShogoXY/vim_script/main/.vimrc_2
 cd
-cd ~;vim .vimrc
+
